@@ -122,6 +122,7 @@ class NidusSmpt {
       await database.updateEmailAsRead(
         email.email,
       );
+      return;
     } catch (e, st) {
       log.severe('We should handle', e, st);
       rethrow;
@@ -145,6 +146,7 @@ class NidusSmpt {
             htmlBody: email.body,
           );
           await _deleteEmailInQueue(email.id);
+          return;
         }
       }
 
@@ -169,6 +171,7 @@ class NidusSmpt {
         status: status,
       );
       log.finer('Email ${message.subject} added to the queue');
+      return;
     } catch (e, st) {
       log.severe('We should handle', e, st);
       rethrow;
@@ -189,6 +192,7 @@ class NidusSmpt {
         followUpDays: followUpDays,
       );
       log.finer('Email sent to ${message.recipients.first}');
+      return;
     } catch (e, st) {
       log.severe('We should handle', e, st);
       rethrow;

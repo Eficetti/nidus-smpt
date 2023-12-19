@@ -63,6 +63,8 @@ class Database {
       followUpAt TIMESTAMP,
     );
   ''');
+
+    return;
   }
 
   /// This method allows the insertion of an email to the queue.
@@ -86,6 +88,7 @@ class Database {
           'status': status.index,
         },
       );
+      return;
     } catch (e) {
       rethrow;
     }
@@ -114,6 +117,7 @@ class Database {
               : null,
         },
       );
+      return;
     } catch (e) {
       rethrow;
     }
@@ -132,6 +136,7 @@ class Database {
           'status': EmailStatus.read.index,
         },
       );
+      return;
     } catch (e) {
       rethrow;
     }
@@ -175,6 +180,7 @@ class Database {
           'id': id,
         },
       );
+      return;
     } catch (e) {
       rethrow;
     }
