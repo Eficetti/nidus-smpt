@@ -109,6 +109,7 @@ class NidusSmpt {
       await _markEmailAsSent(message: message, followUpDays: followUpDays);
 
       log.fine('Email sent successfully to $to');
+      return;
     } on Exception catch (e, st) {
       log.severe('We should handle this error', e, st);
       await _addToEmailQueue(message: message, status: EmailStatus.failed);
