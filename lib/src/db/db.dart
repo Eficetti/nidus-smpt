@@ -47,7 +47,7 @@ class Database {
       "to" VARCHAR(255) NOT NULL,
       subject VARCHAR(255) NOT NULL,
       body TEXT NOT NULL,
-      status INT NOT NULL DEFAULT 0,
+      status INT NOT NULL DEFAULT 0
     );
   ''');
 
@@ -60,7 +60,7 @@ class Database {
       subject VARCHAR(255) NOT NULL,
       body TEXT NOT NULL,
       status INT NOT NULL DEFAULT 0,
-      followUpAt TIMESTAMP,
+      followUpAt TIMESTAMP
     );
   ''');
 
